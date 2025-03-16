@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Blog</title>
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: grey;
+            line-height: 1.6;
+        }
+
+        
+        nav {
+            background-color: mediumaquamarine;
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow:grey;
+        }
+        nav h3 {
+            display: inline;
+            margin-left: 20px;
+            font-size: 24px;
+        }
+        ul {
+            display: inline;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+        ul li {
+            display: inline;
+            margin-right: 20px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s ease-in-out;
+        }
+        ul li:hover {
+            background-color: GREY;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        
+        h1 {
+            color: white;
+            text-align: center;
+            background-color: mediumaquamarine;
+            padding: 60px 20px;
+            font-size: 32px;
+            margin-top: 70px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #222;
+            font-size: 24px;
+            border-left: 5px solid #222;
+            padding-left: 10px;
+        }
+        p, ol {
+            text-align: justify;
+            margin: 10px 20px;
+            font-size: 18px;
+        }
+
+        
+        img {
+            display: block;
+            margin: 20px auto;
+            border: 10px groove black;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+
+       
+        footer {
+            background-color: mediumaquamarine;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        
+        @media (max-width: 768px) {
+            nav h3 {
+                display: block;
+                text-align: center;
+                margin: 10px 0;
+            }
+            ul {
+                float: none;
+                text-align: center;
+            }
+            ul li {
+                display: block;
+                margin: 5px 0;
+            }
+            h1 {
+                font-size: 24px;
+                padding: 40px 10px;
+            }
+            p, ol {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h3>Responsive Blog</h3>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    
+    <h1>Front End Developer Responsibilities: What Does a Front End Developer Do?</h1>
+
+   
+    <div class="container">
+        <p><strong>June 3, 2024 | Paridhi Wadhwani</strong></p>
+
+        <h2>What Does a Front End Developer Do?</h2>
+        <p>A front end developer is responsible for linking the world of design as well as technology together. 
+            They create HTML, CSS, and JavaScript to develop web applications, ensuring an effective interaction between the product or service and the user. 
+            Everything you see, use, or click on a website—such as content, buttons, layout, images, navigation, and internal linking—is the work of a front end developer.
+            Their role is to ensure users can access websites seamlessly across different platforms and browsers without bugs or errors.</p>
+
+        <p>Front end developers need strong analytical thinking, a solid technical foundation, and creativity to design interactive interfaces.</p>
+
+        <img src="https://www.bacancytechnology.com/blog/wp-content/uploads/2020/09/18-09-2020-img-1-%E2%80%93-10.png" width="500px" height="500px" alt="Front End Developer">
+
+        <h2>Front End Developer Responsibilities and Roles</h2>
+        <ol>
+            <li>Prioritize products and features for user experience</li>
+            <li>Convert website designs and link concepts with HTML, CSS, and JavaScript</li>
+            <li>Ensure a functional, user-friendly interface</li>
+            <li>Implement visual elements compatible with various platforms and browsers</li>
+            <li>Follow best SEO practices</li>
+            <li>Test website usability and fix errors or bugs</li>
+        </ol>
+    </div>
+
+   
+    <footer>
+        &copy; 2025 Responsive Blog | Designed by You
+    </footer>
+
+</body>
+</html>
