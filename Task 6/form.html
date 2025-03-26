@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            background-color:navajowhite ;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 20px;
+        }
+        h2{
+            padding-left: 90px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm" onsubmit="return validateForm()">
+        <h2>Registration form</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+        <div id="emailError" class="error"></div>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="Enter the password">
+        <div id="passwordError" class="error"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+
+            emailError.textContent = '';
+            passwordError.textContent = '';
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                emailError.textContent = 'Invalid email format.';
+                isValid = false;
+            }
+
+            if (password.length < 6) {
+                passwordError.textContent = 'Password must be at least 6 characters long.';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
